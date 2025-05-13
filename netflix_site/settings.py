@@ -26,9 +26,10 @@ SECRET_KEY = 'django-insecure-%2=z3qpk)vr1!y9*#v3&_owdr*ekn3z)of&v+e8au$nkzxh)9$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-netflixclone-production.up.railway.app']
+ALLOWED_HOSTS = ['django-netflixclone-production.up.railway.app',
+                 '127.0.0.1']
 CSRF_TRUSTED_ORIGINS = [
-    "https://django-netflixclone-production.up.railway.app",
+    "https://django-netflixclone-production.up.railway.app"
 ]
 
 # Application definition
@@ -58,7 +59,7 @@ ROOT_URLCONF = 'netflix_site.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [BASE_DIR, 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
